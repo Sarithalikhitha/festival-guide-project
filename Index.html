@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Festival Guide</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="header-content">
+          <img src="https://www.shutterstock.com/shutterstock/photos/210637189/display_1500/stock-vector-national-culture-festival-logo-template-210637189.jpg" alt="Festival Guide Logo" id="logo" class="logo">
+          <h1>Festival Guide</h1>
+        </div>
+        <p>Explore festivals, traditions, and create your personalized plans!</p>
+        <button class="button" onclick="startGuide()">Start</button>
+      </div>
+      
+      <div class="container section" id="choose-celebration">
+        <h2>Choose Country</h2>
+        <p>Select a country to explore its festivals:</p>
+        <div class="country-selection">
+          <div class="country" onclick="showFestivals('India')">India</div>
+          <div class="country" onclick="showFestivals('Japan')">Japan</div>
+          <div class="country" onclick="showFestivals('USA')">USA</div>
+          <div class="country" onclick="showFestivals('Brazil')">Brazil</div>
+        </div>
+      </div>
+    
+      <div class="container section" id="generate-activities">
+        <h2>Most popular festival in <span id="festival-name" style="color: #FF6F61; text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);"></span></h2>
+        <div id="festival-content">
+          <!-- Content dynamically populated -->
+        </div>
+        <button class="button" onclick="showActivityIdeas()">Activity Ideas</button>
+        <button class="back-button" onclick="goBackToChooseCelebration()">Back</button>
+      </div>
+      
+      <div class="container section" id="activity-ideas">
+        <h2>Activity Ideas</h2>
+        <div class="activity-content">
+          <ul id="ideas-list">
+            <!-- Activity ideas dynamically populated -->
+          </ul>
+          <img id="activity-image" src="" alt="Activity Image" class="activity-image">
+        </div>
+        <button class="button" onclick="createPlan()">Create a Plan</button>
+        <button class="back-button" onclick="goBackToGenerateActivities()">Back</button>
+      </div>
+    
+      <div class="container section" id="create-plan">
+        <h2>Create Your Plan</h2>
+        <p>Plan your festival activities:</p>
+        <textarea id="plan-text" placeholder="Write your plan here..."></textarea>
+        <button class="button" onclick="savePlan()">Save Plan</button>
+        <button class="back-button" onclick="goBackToActivityIdeas()">Back</button>
+      </div>
+    
+      <div class="container section" id="share-tradition">
+        <h2>Share Tradition</h2>
+        <p>Learn about dressing styles and cultural practices!</p>
+        <div class="tradition-content">
+          <ul id="tradition-list">
+            <li>Traditional Clothing</li>
+            <li>Cultural Dances</li>
+            <li>Festive Cuisine</li>
+          </ul>
+          <img id="tradition-image" src="" alt="Tradition Image" class="tradition-image">
+        </div>
+        <button class="back-button" onclick="goBackToCreatePlan()">Back</button>
+      </div>
+      <script src="script.js"></script>
+
+    </body>
+    </html>
+    
+  
+  
